@@ -1,0 +1,19 @@
+//index
+@import "./utils/variables";
+
+@import "./base/modern-normalize";
+@import "./base/body";
+@import "./base/container";
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/modal";
+@import "./components/advantages";
+@import "./components/activity";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+
+//portfolio
+@import "./components/portfolio-filters";
+@import "./components/portfolio-projects";
