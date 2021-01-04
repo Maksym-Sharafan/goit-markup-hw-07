@@ -16,10 +16,10 @@
   height: 294px;
 
   background-color: $bg-hero-footer;
-}
 
-.activity-item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .activity-text {
@@ -31,20 +31,20 @@
   width: 100%;
 
   background: rgba(47, 48, 58, 0.8);
-}
 
-.activity-text p {
-  padding: 27px;
-  margin: 0 auto;
+  & p {
+    padding: 27px;
+    margin: 0 auto;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
-  color: $text-white;
+    color: $text-white;
+  }
 }
 
 .title {

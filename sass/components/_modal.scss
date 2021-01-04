@@ -85,10 +85,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-}
 
-.label-form:not(:last-child) {
-  margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .text-form {
@@ -113,6 +113,20 @@
   font-size: 16px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+    cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:focus ~ svg {
+    fill: $accent-color;
+    cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .label-form svg {
@@ -120,21 +134,6 @@
   bottom: 14px;
   left: 15px;
   fill: $title-text-color;
-}
-
-.input-form:focus {
-  border-color: $accent-color;
-  outline: none;
-  cursor: pointer;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-form:focus ~ svg {
-  fill: $accent-color;
-  cursor: pointer;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment {
@@ -158,25 +157,24 @@
   margin-right: 8px;
   appearance: none;
   cursor: pointer;
-}
 
-.input-checkbox svg {
-  display: inline-block;
+  & svg {
+    display: inline-block;
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:checked + svg {
+    background-image: url(../../Images/Icons/icon-check.svg);
+    background-color: $accent-color;
 
-.input-checkbox:checked + svg {
-  background-image: url(./Images/Icons/icon-check.svg);
-  background-color: $accent-color;
-
-  background-size: contain;
-  background-origin: border-box;
-  fill: transparent;
-  border-radius: 2px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background-size: contain;
+    background-origin: border-box;
+    fill: transparent;
+    border-radius: 2px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .checkbox-text {
@@ -216,17 +214,16 @@
   border-radius: 4px;
   border: none;
   cursor: pointer;
-}
 
-.button-modal span {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9px;
-  letter-spacing: 0.06em;
-  color: $text-white;
-}
-
-.button-modal:focus,
-.button-modal:hover {
-  background-color: #188ce8;
+  & span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9px;
+    letter-spacing: 0.06em;
+    color: $text-white;
+  }
+  &:focus,
+  &:hover {
+    background-color: #188ce8;
+  }
 }
