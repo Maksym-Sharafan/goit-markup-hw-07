@@ -165,7 +165,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:checked + svg {
-    background-image: url(../../Images/Icons/icon-check.svg);
+    background-image: url(../Images/Icons/icon-check.svg);
     background-color: $accent-color;
 
     background-size: contain;
